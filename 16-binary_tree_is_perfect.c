@@ -47,6 +47,11 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	int numberofnodes = binary_tree_size(tree);
 	/*Calc max number of nodes in a perfect binary tree of given height */
 	int max_nodes = (1 << height) - 1;
+	/*Calculate the number of nodes in a full binary tree with height 3: */
+	/* 1 << 3 equals 8. */
+	/* Subtract 1: 8 - 1 equals 7. */
+	/* So, a perfect binary tree with a height of 3 */
+	/*can have a maximum of 7 nodes.*/
 
 	return (numberofnodes == max_nodes);
 }
